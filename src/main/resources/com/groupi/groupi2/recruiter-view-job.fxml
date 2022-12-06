@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.groupi.groupi2.RecruiterViewJobController">
+
+    <children>
+        <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="81.0" prefWidth="960.0" style="-fx-background-color: #c1d8f0;" AnchorPane.bottomAnchor="639.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="header" alignment="CENTER" layoutX="-1.0" layoutY="16.0" prefHeight="44.0" prefWidth="963.0" text="Job Title">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+            </children></Pane>
+      <TabPane layoutX="184.0" layoutY="79.0" prefHeight="641.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="79.0">
+        <tabs>
+          <Tab text="Applications">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="applicationsTable" prefHeight="609.5" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="tcApplicationsMatch" prefWidth="75.0" text="Match %" />
+                            <TableColumn fx:id="tcApplicationsEmail" prefWidth="75.0" text="Email" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Canidates">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="candidatesTable" prefHeight="609.5" prefWidth="960.0">
+                           <columns>
+                              <TableColumn fx:id="tcCandidatesMatch" prefWidth="75.0" text="Match %" />
+                              <TableColumn fx:id="tcCandidatesEmail" prefWidth="75.0" text="Email" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Edit">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="500.0" prefWidth="720.0" spacing="10.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="50.0">
+                           <children>
+                              <TextField fx:id="title" prefHeight="26.0" prefWidth="270.0" promptText="Job Title" />
+                              <TextArea fx:id="description" prefHeight="175.0" prefWidth="840.0" promptText="Job description" />
+                              <ComboBox fx:id="salaryRange" prefHeight="26.0" prefWidth="300.0" promptText="Salary range" />
+                              <ComboBox fx:id="location" layoutX="10.0" layoutY="231.0" prefHeight="26.0" prefWidth="300.0" promptText="Location" />
+                              <CheckComboBox fx:id="categories" prefHeight="26.0" prefWidth="300.0" showCheckedCount="true" title="Categories" />
+                              <CheckComboBox fx:id="skills" layoutX="10.0" layoutY="303.0" prefHeight="26.0" prefWidth="300.0" showCheckedCount="true" title="Skills" />
+                              <CheckBox fx:id="isPublished" mnemonicParsing="false" text="Publish (Note: Published jobs cannot be edited)" />
+                              <Button fx:id="editJobButton" mnemonicParsing="false" onAction="#editJob" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #0036ff;" text="Edit job" textFill="WHITE" />
+                              <Label fx:id="error" prefHeight="156.0" prefWidth="293.0" textFill="#ff6767" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

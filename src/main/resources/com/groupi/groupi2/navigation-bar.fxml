@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.groupi.groupi2.RecruiterProfileController">
+   <children>
+      <HBox layoutX="600.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="52.0" prefWidth="1200.0" style="-fx-background-color: #c1d8f0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                  <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #c1d8f0;" text="Logout">
+                      <graphic>
+                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@icons/logout.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+            </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#notificationsButton" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #c1d8f0;" text="Notifications">
+                      <graphic>
+                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@icons/notification.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="100.0" layoutY="10.0" mnemonicParsing="false" onAction="#jobsButton" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #c1d8f0;" text="Jobs">
+                      <graphic>
+                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@icons/search.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="190.0" layoutY="10.0" mnemonicParsing="false" onAction="#profileButton" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #c1d8f0;" text="Profile">
+                      <graphic>
+                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@icons/user.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                  <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="51.0" prefWidth="232.0" HBox.hgrow="ALWAYS">
+                      <children>
+                          <Label alignment="TOP_LEFT" contentDisplay="TOP" text="JSS | Job Seeker">
+                              <font>
+                                  <Font name="System Bold" size="16.0" />
+                              </font>
+                          </Label>
+                      </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+                  </HBox>
+              </children>
+      </HBox>
+   </children>
+</AnchorPane>
